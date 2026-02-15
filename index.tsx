@@ -1,8 +1,9 @@
-/*
- * Vencord, a Discord client mod
- * Copyright (c) 2024 Vendicated and contributors
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
+export const pluginInfo = {
+    id: "channelBadges",
+    name: "Channel Badges",
+    description: "Channel Badges",
+    color: "#7289da"
+};
 
 import "./style.css";
 
@@ -17,9 +18,7 @@ import { isEnabled, returnChannelBadge, settings } from "./settings";
 
 import { Logger } from "@utils/Logger";
 
-const pluginId = "channelBadges";
-const pluginName = "Channel Badges";
-const logger = new Logger(pluginName, "#7289da");
+const logger = new Logger(pluginInfo.name, pluginInfo.color);
 
 function renderBadge(id: number, title: string) {
     const { css, label, color } = returnChannelBadge(id);
@@ -37,8 +36,8 @@ function renderBadge(id: number, title: string) {
 }
 
 export default definePlugin({
-    name: pluginName,
-    description: pluginName,
+    name: "Channel Badges",
+    description: "Channel Badges",
     authors: [EquicordDevs.creations, Devs.thororen],
     settings,
     patches: [
