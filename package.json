@@ -1,0 +1,21 @@
+{
+    "name": "channelBadges",
+    "version": "1.0.0",
+    "description": "Channel Badges",
+    "main": "index.tsx",
+    "author": {
+        "name": "Bluscream",
+        "url": "https://github.com/Bluscream"
+    },
+    "license": "GPL-3.0-or-later",
+    "vencord": {
+        "plugin": true,
+        "userPlugin": true
+    },
+    "files": [
+        "index.tsx",
+        "settings.tsx",
+        "style.css",
+        "package.json"
+    ]
+}
