@@ -3,7 +3,6 @@
 import "./style.css";
 
 import { React, ChannelStore, GuildStore, PermissionStore, SelectedGuildStore, VoiceStateStore, PermissionsBits } from "@webpack/common";
-import { Devs, EquicordDevs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { Logger } from "@utils/Logger";
 

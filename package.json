@@ -1,5 +1,5 @@
 {
-    "name": "channelBadges",
+    "name": "channelBadgesFork",
     "version": "1.0.0",
     "description": "Adds customizable badges to channels in the channel list",
     "main": "index.tsx",
