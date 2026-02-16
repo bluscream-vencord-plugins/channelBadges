@@ -15,7 +15,7 @@ import { JSX } from "react";
 // region PluginInfo
 export const pluginInfo = {
     id: "channelBadges",
-    name: "Channel Badges",
+    name: "ChannelBadges",
     description: "Adds customizable badges to channels in the channel list",
     color: "#7289da",
     authors: [
@@ -49,7 +49,7 @@ function renderBadge(id: number, title: string) {
 
 // region Definition
 export default definePlugin({
-    name: pluginInfo.id,
+    name: pluginInfo.name,
     description: pluginInfo.description,
     authors: pluginInfo.authors,
     settings,
