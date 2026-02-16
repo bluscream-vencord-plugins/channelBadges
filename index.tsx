@@ -12,19 +12,8 @@ import { isVoiceChannel } from "./utils/channels";
 import { JSX } from "react";
 // endregion Imports
 
-// region PluginInfo
-export const pluginInfo = {
-    id: "channelBadges",
-    name: "ChannelBadges",
-    description: "Adds customizable badges to channels in the channel list",
-    color: "#7289da",
-    authors: [
-        EquicordDevs.creations,
-        Devs.thororen,
-        { name: "Assistant", id: 0n }
-    ],
-};
-// endregion PluginInfo
+import { pluginInfo } from "./info";
+export { pluginInfo };
 
 // region Variables
 const logger = new Logger(pluginInfo.id, pluginInfo.color);
