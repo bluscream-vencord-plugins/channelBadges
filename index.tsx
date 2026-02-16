@@ -16,7 +16,7 @@ import { JSX } from "react";
 export const pluginInfo = {
     id: "channelBadges",
     name: "Channel Badges",
-    description: "Adds customizable badges to channels in the channel list (Locked, NSFW, Rules, etc.)",
+    description: "Adds customizable badges to channels in the channel list",
     color: "#7289da",
     authors: [
         EquicordDevs.creations,

@@ -1,7 +1,7 @@
 {
     "name": "channelBadges",
     "version": "1.0.0",
-    "description": "Adds customizable badges to channels in the channel list (Locked, NSFW, Rules, etc.)",
+    "description": "Adds customizable badges to channels in the channel list",
     "main": "index.tsx",
     "author": {
         "name": "Bluscream",
