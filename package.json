@@ -1,11 +1,15 @@
 {
     "name": "channelBadges",
     "version": "1.0.0",
-    "description": "Channel Badges",
+    "description": "Adds customizable badges to channels in the channel list (Locked, NSFW, Rules, etc.)",
     "main": "index.tsx",
     "author": {
         "name": "Bluscream",
         "url": "https://github.com/Bluscream"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bluscream-vencord-plugins/channelBadges.git"
     },
     "license": "GPL-3.0-or-later",
     "vencord": {
@@ -14,7 +18,7 @@
     },
     "files": [
         "index.tsx",
-        "settings.tsx",
+        "settings.ts",
         "style.css",
         "package.json"
     ]

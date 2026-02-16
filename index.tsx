@@ -1,25 +1,36 @@
+//// Plugin originally written for Equicord at 2026-02-16 by https://github.com/Bluscream, https://antigravity.google
+// region Imports
+import "./style.css";
+
+import { React, ChannelStore, GuildStore, PermissionStore, SelectedGuildStore, VoiceStateStore, PermissionsBits } from "@webpack/common";
+import { Devs, EquicordDevs } from "@utils/constants";
+import definePlugin from "@utils/types";
+import { Logger } from "@utils/Logger";
+
+import { isEnabled, returnChannelBadge, settings } from "./settings";
+import { isVoiceChannel } from "./utils/channels";
+import { JSX } from "react";
+// endregion Imports
+
+// region PluginInfo
 export const pluginInfo = {
     id: "channelBadges",
     name: "Channel Badges",
-    description: "Channel Badges",
-    color: "#7289da"
+    description: "Adds customizable badges to channels in the channel list (Locked, NSFW, Rules, etc.)",
+    color: "#7289da",
+    authors: [
+        EquicordDevs.creations,
+        Devs.thororen,
+        { name: "Assistant", id: 0n }
+    ],
 };
+// endregion PluginInfo
 
-import "./style.css";
+// region Variables
+const logger = new Logger(pluginInfo.id, pluginInfo.color);
+// endregion Variables
 
-import { Devs, EquicordDevs } from "@utils/constants";
-import definePlugin from "@utils/types";
-import { Channel } from "@vencord/discord-types";
-import { Constants, GuildStore, PermissionStore, React, SelectedGuildStore, VoiceStateStore, ChannelStore, PermissionsBits } from "@webpack/common";
-import { isVoiceChannel } from "./utils/channels";
-import { JSX } from "react";
-
-import { isEnabled, returnChannelBadge, settings } from "./settings";
-
-import { Logger } from "@utils/Logger";
-
-const logger = new Logger(pluginInfo.name, pluginInfo.color);
-
+// region Utils
 function renderBadge(id: number, title: string) {
     const { css, label, color } = returnChannelBadge(id);
 
@@ -34,11 +45,13 @@ function renderBadge(id: number, title: string) {
         </div>
     );
 }
+// endregion Utils
 
+// region Definition
 export default definePlugin({
-    name: "Channel Badges",
-    description: "Channel Badges",
-    authors: [EquicordDevs.creations, Devs.thororen],
+    name: pluginInfo.id,
+    description: pluginInfo.description,
+    authors: pluginInfo.authors,
     settings,
     patches: [
         // TY TypingIndicator
@@ -104,3 +117,4 @@ export default definePlugin({
         return <div className="badge-container">{badges}</div>;
     }
 });
+// endregion Definition
