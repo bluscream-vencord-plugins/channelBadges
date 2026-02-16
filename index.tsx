@@ -73,7 +73,7 @@ export default definePlugin({
         }
     ],
     renderChannelBadges(channel: any) {
-        if (!channel || !isEnabled(channel.type)) return null;
+        if (!channel) return null;
 
         const { type, nsfw, threadMetadata } = channel;
         const isPrivate = channel.isPrivate?.() || threadMetadata?.locked || channel.isArchivedThread?.();
@@ -103,7 +103,7 @@ export default definePlugin({
             const first = badgeConditions.find(({ id, condition }) => condition && isEnabled(id));
             if (first) {
                 badges.push(renderBadge(first.id, first.title));
-            } else {
+            } else if (isEnabled(type)) {
                 badges.push(renderBadge(type, returnChannelBadge(type).label));
             }
         } else {
@@ -111,8 +111,12 @@ export default definePlugin({
                 .filter(({ id, condition }) => condition && isEnabled(id))
                 .map(({ id, title }) => renderBadge(id, title));
 
-            badges.push(renderBadge(type, returnChannelBadge(type).label));
+            if (isEnabled(type)) {
+                badges.push(renderBadge(type, returnChannelBadge(type).label));
+            }
         }
+
+        if (badges.length === 0) return null;
 
         return <div className="badge-container">{badges}</div>;
     }
