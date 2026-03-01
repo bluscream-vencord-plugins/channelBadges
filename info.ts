@@ -8,6 +8,6 @@ export const pluginInfo = {
     authors: [
         EquicordDevs.creations,
         Devs.thororen,
-        { name: "Assistant", id: 0n }
+        { name: "Antigravity.AI", id: 0n }
     ],
 };
