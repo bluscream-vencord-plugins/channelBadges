@@ -18,7 +18,9 @@
     },
     "files": [
         "index.tsx",
+        "patterns.ts",
         "settings.ts",
+        "utils/channels.ts",
         "style.css",
         "package.json"
     ]

@@ -1,4 +1,13 @@
-.channel-badge {
+.vc-channelBadgesFork-container {
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+    margin-left: 0.2rem;
+    order: 2;
+    min-width: 0;
+}
+
+.vc-channelBadgesFork-badge {
     margin-left: 0.2rem;
     padding: 2px 8px;
     border-radius: 20px;
@@ -10,68 +19,66 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 8em;
     text-align: center;
 }
 
-.badge-container {
-    display: flex;
-    gap: 0.1rem;
-    align-items: center;
-    margin-left: 0.2rem;
-    order: 2;
+.vc-channelBadgesFork-text,
+.vc-channelBadgesFork-rules,
+.vc-channelBadgesFork-stage,
+.vc-channelBadgesFork-media,
+.vc-channelBadgesFork-forum {
+    background-color: var(--brand-500);
 }
 
-.channel-badge-text {
-    background-color: #5865F2;
+.vc-channelBadgesFork-voice,
+.vc-channelBadgesFork-region {
+    background-color: var(--status-positive);
 }
 
-.channel-badge-voice {
-    background-color: #3BA55D;
-}
-
-.channel-badge-category {
+.vc-channelBadgesFork-category,
+.vc-channelBadgesFork-locked-voice,
+.vc-channelBadgesFork-unknown {
     background-color: #4F545C;
 }
 
-.channel-badge-directory {
-    background-color: #FAA61A;
+.vc-channelBadgesFork-directory,
+.vc-channelBadgesFork-announcement {
+    background-color: var(--status-warning);
 }
 
-.channel-badge-thread,
-.channel-badge-public-thread,
-.channel-badge-announcement-thread,
-.channel-badge-private-thread {
+.vc-channelBadgesFork-thread,
+.vc-channelBadgesFork-announcement-thread,
+.vc-channelBadgesFork-private-thread {
     background-color: #7289DA;
 }
 
-.channel-badge-announcement,
-.channel-badge-announcement-channel {
-    background-color: #FAA61A;
-}
-
-.channel-badge-rules,
-.channel-badge-stage,
-.channel-badge-media,
-.channel-badge-forum {
-    background-color: #5865F2;
-}
-
-.channel-badge-nsfw {
+.vc-channelBadgesFork-nsfw {
     background-color: #E91E63;
 }
 
-.channel-badge-locked {
+.vc-channelBadgesFork-full {
+    background-color: var(--status-danger);
+}
+
+.vc-channelBadgesFork-locked {
     background-color: #B9BBBE;
+    color: #1E1F22;
 }
 
-.channel-badge-unknown {
-    background-color: #747F8D;
+.vc-channelBadgesFork-honeypot {
+    background-color: #FEE75C;
+    color: #1E1F22;
 }
 
-.channel-badge-full {
-    background-color: #ED4245;
+.vc-channelBadgesFork-status-good {
+    background-color: var(--status-positive);
 }
 
-.channel-badge-locked-voice {
-    background-color: #4F545C;
+.vc-channelBadgesFork-status-average {
+    background-color: var(--status-warning);
+}
+
+.vc-channelBadgesFork-status-bad {
+    background-color: var(--status-danger);
 }
